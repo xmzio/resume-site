@@ -1,0 +1,26 @@
+
+{% assign headingLevel3  = 3 + include.headingOffset %}
+{% assign headingLevel4  = 4 + include.headingOffset %}
+
+
+{% assign previousOrganization  = "" %}
+{% for item in include.items %}
+
+  {% if item.oneOfMany == true %}
+
+    {% if item.organization != previousOrganization %}
+    
+      {% include resume_organization.html item=item headingLevel=headingLevel3  %}
+      
+    {% endif %}
+
+    {% include resume_item_without_organization.html item=item headingLevel=headingLevel4 %}
+
+  {% else %}
+  
+    {% include resume_item_with_organization.html item=item headingLevel=headingLevel3 %}
+  
+  {% endif %}
+  
+  {% assign previousOrganization  = item.organization %}
+{% endfor %}

@@ -1,0 +1,12 @@
+---
+permalink: /assets/main.js
+---
+
+var resume_section_experiencePrevious = document.getElementById('resume_section_experiencePrevious');
+var resume_section_experiencePrevious_revealButton = document.getElementById('resume_section_experiencePrevious_revealButton');
+resume_section_experiencePrevious.addEventListener('hide.bs.collapse', function () {
+  resume_section_experiencePrevious_revealButton.innerHTML = 'Reveal';
+});
+resume_section_experiencePrevious.addEventListener('show.bs.collapse', function () {
+  resume_section_experiencePrevious_revealButton.innerHTML = 'Collapse';
+});

@@ -1,0 +1,74 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+$font-family-base: 'Tinos', serif;
+
+body {
+  --bs-font-serif: 'Tinos', serif;
+  --bs-body-font-family: var(--bs-font-serif);
+  --bs-font-monospace: 'VT323', monospace;
+}
+h3, h4 {
+  padding-top: 10pt;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.resume_section {
+  padding: 15pt 0 15pt 0;
+}
+.resume_clients h2 {
+  display: none;
+}
+.organization {
+  display: block;
+  font-size: 1.4em;
+}
+.period {
+  
+}
+img.emblem {
+  margin-top: 10pt;
+  max-height: 40px;
+}
+img.emblem-small {
+  max-height: 40px;
+}
+ul.social {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ul.social svg {
+  width: 1em;
+  height: 1em;
+  fill: darkslategray;
+  margin: 4pt;
+  padding: 0;
+
+  display: inline-block;
+  vertical-align: -.5em;
+}
+footer {
+  margin: 25pt 0 25pt 0;
+}
+ul.footer {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ul.footer li {
+  display: inline;
+}
+ul.footer li:before {
+  content: "\2022";
+  margin: 0 4pt 0 4pt;
+}
+ul.footer li:first-child:before {
+  content: "";
+}
+.col-emblem {
+  max-width: 48px;
+}

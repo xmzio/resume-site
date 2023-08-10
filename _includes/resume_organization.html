@@ -1,0 +1,14 @@
+
+<div class="row">
+  <div class="col-2"></div>
+  <div class="col-1 col-emblem align-self-end">
+
+    <img class="emblem" src="{{ "/assets/160/" | append: include.item.emblemfile | relative_url }}" alt="{{ include.item.organization }}">
+
+  </div>
+  <div class="col-7 align-self-end">
+
+    <h{{ include.headingLevel }} >{{ include.item.organization }}</h{{ include.headingLevel }} >
+
+  </div>
+</div>
