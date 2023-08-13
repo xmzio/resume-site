@@ -1,0 +1,120 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+$font-family-base: 'Tinos', serif;
+
+body {
+  --bs-font-serif: 'Tinos', serif;
+  --bs-body-font-family: var(--bs-font-serif);
+  --bs-font-monospace: 'VT323', monospace;
+}
+
+a {
+  color: DimGray;
+  text-decoration: none;
+  border-bottom: 1px dotted dimgray;
+}
+a:hover {
+  border-bottom: 2px dotted dimgray;
+}
+a.no-decoration {
+  text-decoration: none;
+  border-bottom: none;
+}
+
+header {
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+.header_aside {
+  margin: 0 0 1em 1em;
+}
+.header_aside ul {
+  margin-bottom: 0;
+}
+.contact_methods svg {
+  width: 1em;
+  height: 1em;
+  fill: darkslategray;
+  margin-right: .2em;
+  margin-bottom: .25em;
+  padding: 0;
+  display: inline-block;
+}
+
+footer {
+  margin-top: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+h2 {
+  font-size: 1.1em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+h3, h4 {
+  padding-top: 10pt;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.resume_section {
+  padding: 15pt 0 15pt 0;
+}
+.resume_skillsSoft, .resume_skillsTechnical {
+  margin: 15pt 0 0 0;
+  padding: 0;
+}
+.resume_section .card h3 {
+  font-size: .8em;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+.resume_section .card p {
+  font-size: .75em;
+  margin: 0;
+}
+
+.organization {
+  display: block;
+  font-size: 1.4em;
+}
+
+.col-emblem {
+  max-width: 48px;
+  min-width: 48px;
+}
+img.emblem {
+  margin-top: 10pt;
+  max-height: 40px;
+}
+img.emblem-medium, img[src*="#medium-emblem"] {
+  max-width: 30px;
+  margin: 4px 12px 4px 4px;
+}
+img.emblem-small, img[src*="#small-emblem"] {
+  max-height: 20px;
+  margin: 12px 20px 12px 0;
+}
+
+.item_period svg {
+  width: 1em;
+  height: 1em;
+  margin-right: .2em;
+  margin-bottom: .25em;
+  padding: 0;
+  display: inline-block;
+}
+.listitems_as_badges ul {
+  margin: 0 0 .25rem 0;
+  padding: 0;
+}
+.listitems_as_badges_items {
+  font-family: sans-serif;
+  font-weight: normal;
+}
+

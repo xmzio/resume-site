@@ -1,0 +1,35 @@
+
+{% assign card_section_open = false %}
+{% assign list_section_open = false %}
+
+{% for item in include.items %}
+  {% if item.highlight == true %}
+    {% if card_section_open == false %}
+      <div class="row">
+          <div class="col-12 d-flex flex-row pb-1">
+      {% assign card_section_open = true %}
+    {% endif %}
+
+    {% include resume_item_card.html item=item %}
+
+  {% else %}
+    {% if card_section_open == true %}
+        </div>
+      </div>
+      {% assign card_section_open = false %}
+    {% endif %}
+    {% if list_section_open == false %}
+        <div class="row">
+          <div class="col-12">
+      {% assign list_section_open = true %}
+    {% endif %}
+            
+    {% include resume_item_list.html item=item %}
+
+    {% if list_section_open == true %}
+        </div>
+      </div>
+      {% assign list_section_open = false %}
+    {% endif %}
+  {% endif %}
+{% endfor %}

@@ -1,8 +1,0 @@
-<li>{% assign entry = include.item %}
-  <a rel="me" href="{{ entry.url }}" target="_blank" title="{{ entry.title | default: entry.platform }}">
-    <svg>
-      <use xlink:href="{{ '/assets/social-icons.svg#' | append: entry.platform | relative_url }}"></use>
-    </svg>
-    {{- entry.title -}}
-  </a>
-</li>

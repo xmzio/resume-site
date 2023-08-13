@@ -4,18 +4,28 @@ footnote: © 2023 Me; I could set the building on...
 baseurl: 
 url: ""
 
-social_links:
-  - { platform: email,  url: "&#109;ailto&#58;mwaddams&#64;initech&#46;com", title: "mwaddams&#64;initech&#46;com" }
-  - { platform: linkedin, url: "https://www.linkedin.com/in/miltonwaddams/", title: "LinkedIn profile" }
+contact_methods:
+  - { symbol_name: email,  url: "&#109;ailto&#58;mwaddams&#64;initech&#46;com", title: "mwaddams&#64;initech&#46;com", hint: "Send an email" }
+  - { symbol_name: linkedin, url: "https://www.linkedin.com/in/miltonwaddams/", title: "linkedin.com/in/miltonwaddams", hint: "Visit LinkedIn profile" }
+  # - { symbol_name: telephone,  url: "tel:+1-123-456-7890", title: "+1 123-456-7890", hint: "Call 123-456-7890" }
+  # - { symbol_name: voicemail,  url: "tel:+1-123-456-7890", title: "+1 123-456-7890", caption: "Please leave a message, I'll respond within the next business day" }
+  - { symbol_name: home, url: "https://maps.apple.com/?address=Seattle,%20WA%20%2098103,%20United%20States", title: "Seattle, WA", hint: "View Seattle on the map" }
+
+website:
+  title: miltonwaddams.github.io/resume
+  url: https://miltonwaddams.github.io/resume
+    
 github_repository:
   title: github.com/miltonwaddams/resume
   url: https://github.com/miltonwaddams/resume
 
+google_analytics: G-1234567890
+
 collections_dir: content
 collections:
-  clients:
+  skillsSoft:
     output: false
-  skills:
+  skillsTechnical:
     output: false
   experience:
     output: false

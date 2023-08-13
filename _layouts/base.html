@@ -8,16 +8,25 @@
       
     <div class="container">
 
-      {%- include header.html -%}
+      <div class="row">
+        <div class="col-12">
 
-      <main class="page-content" aria-label="Content">
+          {%- include header.html -%}
+          {%- include header_aside.html -%}
 
-        {{- content -}}
+          <div class="lead">
+            {{ page.hero | markdownify }}
+          </div>
+          
+        </div>
+      </div>
 
+
+      <main aria-label="Content">
+        {{ content }}
       </main>
 
-      {%- include footer.html -%}
-
+      {% include footer.html %}
     </div>
 
     <script src="{{ "/assets/main.js" | relative_url }}"></script>

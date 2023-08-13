@@ -4,35 +4,45 @@ layout: base
 <article class="post">
   
   <div class="row">
-    <div class="col-2"></div>
-    <div class="col-8">
+    <div class="col-12">
     
       {{- content -}}
   
     </div>
   </div>
   
-  <div class="resume_section resume_clients">
+  <div class="resume_section resume_skillsSoft listitems_as_badges">
     <div class="row">
-      <div class="col-2"></div>
-      <div class="col-8">
+      <div class="col-12">
+  
+        <h2>Skills</h2>
+        {{- page.skillsSoft_caption | markdownify -}}
+  
+      </div>
+    </div>
 
-        <h2>Clients</h2>
-        <p>{{- page.clients_caption | escape -}}</p>
+    {%- include resume_section_cards_and_lists.html items=site.skillsSoft -%}
+  </div>
+
+  <div class="resume_section resume_skillsTechnical listitems_as_badges">
+    <div class="row">
+      <div class="col-12">
+  
+        <h2>Technical</h2>
+        {{- page.skillsTechnical_caption | markdownify -}}
   
       </div>
     </div>
   
-    {%- include resume_section_logos.html items=site.clients -%}
+    {%- include resume_section_cards_and_lists.html items=site.skillsTechnical -%}
   </div>
-  
+
   <div class="resume_section resume_experience">
     <div class="row">
-      <div class="col-2"></div>
-      <div class="col-8">
+      <div class="col-12">
 
         <h2>Experience</h2>
-        <p>{{- page.experience_caption | escape -}}</p>
+        {{- page.experience_caption | markdownify -}}
 
       </div>
     </div>
@@ -42,31 +52,34 @@ layout: base
   
   <div class="resume_section resume_experiencePrevious">
     <div class="row">
-      <div class="col-2"></div>
-      <div class="col-8">
+      <div class="col-12">
         
-        <h3>Previous experience</h3>
-        <p>{{- page.experiencePrevious_caption | escape -}}</p>
-
-        <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#resume_section_experiencePrevious" aria-expanded="false" aria-controls="resume_section_experiencePrevious" id="resume_section_experiencePrevious_revealButton">
-          Reveal
-        </button>
+        <div class="hide_print">
+          {{- page.experiencePrevious_caption | markdownify -}}
+  
+          <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#resume_section_experiencePrevious" aria-expanded="false" aria-controls="resume_section_experiencePrevious" id="resume_section_experiencePrevious_revealButton">
+            Show
+          </button>
+        </div>
+        
+        <div class="hide_display">
+          {{- page.experiencePrevious_caption_print -}}&nbsp;<a href="{{ site.website.url }}">{{ site.website.title }}</a>
+        </div>
 
       </div>
     </div>
 
     <div class="collapse" id="resume_section_experiencePrevious">
-      {%- include resume_section_items.html items=site.experiencePrevious headingOffset=1 -%}
+      {%- include resume_section_items.html items=site.experiencePrevious -%}
     </div>
   </div>
   
   <div class="resume_section resume_education">
     <div class="row">
-      <div class="col-2"></div>
-      <div class="col-8">
+      <div class="col-12">
 
         <h2>Education</h2>
-        <p>{{- page.education_caption | escape -}}</p>
+        {{- page.education_caption | markdownify -}}
   
       </div>
     </div>

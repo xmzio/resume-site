@@ -1,0 +1,8 @@
+<li class="contact_methods">{% assign item = include.item %}
+  <a class="no-decoration" rel="me" href="{{ item.url }}" target="_blank" title="{{ item.hint | default: item.symbol_name }}">
+    <svg>
+      <use xlink:href="{{ '/assets/contact_icons.svg#' | append: item.symbol_name | relative_url }}"></use>
+    </svg></a>
+    <a rel="me" href="{{ item.url }}" target="_blank" title="{{ item.hint | default: item.symbol_name }}">{{- item.title -}}</a>
+  </a>&nbsp;{{- item.caption -}}
+</li>

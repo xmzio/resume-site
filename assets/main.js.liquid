@@ -2,11 +2,27 @@
 permalink: /assets/main.js
 ---
 
+var listitems_as_badges_lists = document.querySelectorAll(".listitems_as_badges ul");
+for( let i=0; i < listitems_as_badges_lists.length; i++) {
+  listitems_as_badges_lists[i].classList.add("list-unstyled");
+}
+
+var listitems_as_badges_items = document.querySelectorAll(".listitems_as_badges li");
+for( let i=0; i < listitems_as_badges_items.length; i++) {
+  listitems_as_badges_items[i].classList.add("badge");
+  listitems_as_badges_items[i].classList.add("text-bg-light");
+  listitems_as_badges_items[i].classList.add("listitems_as_badges_items");
+}
+
+var hideString = 'Hide previous experience <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>';
+var showString = 'Show previous experience <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>';
+
 var resume_section_experiencePrevious = document.getElementById('resume_section_experiencePrevious');
 var resume_section_experiencePrevious_revealButton = document.getElementById('resume_section_experiencePrevious_revealButton');
 resume_section_experiencePrevious.addEventListener('hide.bs.collapse', function () {
-  resume_section_experiencePrevious_revealButton.innerHTML = 'Reveal';
+  resume_section_experiencePrevious_revealButton.innerHTML = showString;
 });
 resume_section_experiencePrevious.addEventListener('show.bs.collapse', function () {
-  resume_section_experiencePrevious_revealButton.innerHTML = 'Collapse';
+  resume_section_experiencePrevious_revealButton.innerHTML = hideString;
 });
+resume_section_experiencePrevious_revealButton.innerHTML = showString;
